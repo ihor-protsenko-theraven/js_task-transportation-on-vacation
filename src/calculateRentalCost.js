@@ -7,13 +7,15 @@ function calculateRentalCost(days) {
   const baseRentalPerDay = 40;
   const discountThreeDays = 20;
   const cashbackByWeek = 50;
+  const longTerm = 7;
+  const shortTerm = 3;
   const cost = baseRentalPerDay * days;
 
-  if (days >= 7) {
+  if (days >= longTerm) {
     return cost - cashbackByWeek;
   }
 
-  if (days >= 3) {
+  if (days >= shortTerm) {
     return cost - discountThreeDays;
   }
 
